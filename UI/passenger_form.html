@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+		<!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+		<!-- Title -->
+		<title>Airline</title>
+		<!-- Favicon -->
+		<link rel="icon" href="img/core-img/favicon.ico" />
+		<!-- Core Stylesheet -->
+		<link href="style.css" rel="stylesheet" />
+		<!-- Responsive CSS -->
+		<link href="css/responsive/responsive.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<!-- ***** Header Area Start ***** -->
+		<header class="header_area" id="header">
+			<div class="container-fluid h-100">
+				<div class="row h-100">
+					<div class="col-12 h-100">
+						<nav class="h-100 navbar navbar-expand-lg">
+							<a class="navbar-brand" href="index.html"><img src="img/core-img/logo.png" alt="" /></a>
+							<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#airlineNav" aria-controls="airlineNav" aria-expanded="false" aria-label="Toggle navigation">
+								<span class="fas fa-bars"></span>
+							</button>
+							<!-- Nav -->
+							<div class="collapse navbar-collapse" id="airlineNav">
+								<ul class="navbar-nav mr-auto" id="airlineMenu">
+									<li class="nav-item active">
+										<a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+									</li>
+								</ul>
+								<!-- Logout btn -->
+								<div class="airline-logout-btn">
+									<a href="index.html" id="logout-btn" class="btn airline-btn"><i class="fas fa-sign-out-alt pr-2"></i>Logout</a>
+								</div>
+							</div>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- ***** Header Area End ***** -->
+
+		<!-- ***** Breadcrumb Area Start ***** -->
+		<div class="breadcrumb-area bg-img bg-overlay" style="background-image: url(img/bg-img/hero-1.jpg)"></div>
+		<!-- ***** Breadcrumb Area End ***** -->
+
+		<!-- Manage Area Start -->
+		<section class="airline-manage-area d-md-flex">
+			<!-- Manage Search Area -->
+			<div class="manage-search-area d-md-flex">
+				<!-- Manage Search Form -->
+				<div class="manage-search-form">
+					<form action="" method="post">
+						<div class="container">
+							<h5><i class="fas fa-user-edit pr-2"></i>My info</h5>
+							<div class="row">
+								<div class="form-group col-lg-4">
+									<input type="text" name="passportNO" class="form-control input-field" id="passportNO" autocomplete="off" required />
+									<label class="form-control-placeholder" for="passportNO">Passport NO</label>
+								</div>
+								<div class="form-group col-lg-4" id="datepicker">
+									<input type="text" name="expiryDate" class="form-control date-input" id="expiryDate" autocomplete="off" required />
+									<label class="form-control-placeholder" for="expiryDate">Passport Expiry Date</label>
+									<i class="fas fa-calendar-alt"></i>
+								</div>
+								<div class="form-group col-lg-4">
+									<select id="countryID" name="countryID" class="form-control selectpicker" title="" data-live-search="true" required>
+										<option disabled selected></option>
+										<option value="">Bangladesh</option>
+									</select>
+									<label class="form-control-placeholder" for="countryID">Country ID</label>
+								</div>
+							</div>
+							<div class="row">
+								<div class="form-group col-lg-4">
+									<input type="text" name="firstName" class="form-control input-field" id="f_name" autocomplete="off" required />
+									<label class="form-control-placeholder" for="f_name">First Name</label>
+								</div>
+								<div class="form-group col-lg-4">
+									<input type="text" name="midName" class="form-control input-field" id="m_name" autocomplete="off" required />
+									<label class="form-control-placeholder" for="m_name">Middle Name</label>
+								</div>
+								<div class="form-group col-lg-4">
+									<input type="text" name="lastName" class="form-control input-field" id="l_name" autocomplete="off" required />
+									<label class="form-control-placeholder" for="l_name">Last Name</label>
+								</div>
+							</div>
+							<div class="row">
+								<div class="form-group col-lg-12">
+									<button type="submit" name="info-add" class="btn airline-btn add-btn"><i class="fas fa-plus pr-2"></i>ADD</button>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</section>
+		<!-- Manage Area End -->
+
+		<!-- jQuery-2.2.4 js -->
+		<script src="js/jquery/jquery-2.2.4.min.js"></script>
+		<!-- Popper js -->
+		<script src="js/bootstrap/popper.min.js"></script>
+		<!-- Bootstrap-4 js -->
+		<script src="js/bootstrap/bootstrap.min.js"></script>
+		<script src="js/bootstrap/bootstrap-select.min.js"></script>
+		<script src="js/bootstrap/bootstrap-datepicker.min.js"></script>
+		<!-- All Plugins js -->
+		<script src="js/others/plugins.js"></script>
+		<!-- Active JS -->
+		<script src="js/active.js"></script>
+	</body>
+</html>

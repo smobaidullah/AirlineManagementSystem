@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+		<!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+		<!-- Title -->
+		<title>Airline - Manage Your Flight Booking Online</title>
+		<!-- Favicon -->
+		<link rel="icon" href="img/core-img/favicon.ico" />
+		<!-- Core Stylesheet -->
+		<link href="style.css" rel="stylesheet" />
+		<!-- Responsive CSS -->
+		<link href="css/responsive/responsive.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<!-- ***** Header Area Start ***** -->
+		<header class="header_area" id="header">
+			<div class="container-fluid h-100">
+				<div class="row h-100">
+					<div class="col-12 h-100">
+						<nav class="h-100 navbar navbar-expand-lg justify-content-center">
+							<a class="navbar-brand"><img src="img/core-img/logo.png" alt="" /></a>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- ***** Header Area End ***** -->
+
+		<!-- ***** Welcome Area Start ***** -->
+		<section class="airline-welcome-area bg-img bg-overlay" style="background-image: url(img/bg-img/hero-1.jpg)">
+			<div class="container h-100">
+				<div class="row h-100 justify-content-center">
+					<div class="col-12 col-md-10">
+						<!-- Hero Search Form -->
+						<div class="hero-search-form">
+							<!-- Tabs -->
+							<div class="nav nav-tabs nav-justified" id="heroTab" role="tablist">
+								<a class="nav-item nav-link active" id="nav-userLogin-tab" data-toggle="tab" href="#nav-userLogin" role="tab" aria-controls="nav-userLogin" aria-selected="true"
+									><i class="fas fa-users pr-2"></i>User Login</a
+								>
+								<a class="nav-item nav-link" id="nav-userSignup-tab" data-toggle="tab" href="#nav-userSignup" role="tab" aria-controls="nav-userSignup" aria-selected="false"
+									><i class="fas fa-user-plus pr-2"></i>Sign Up</a
+								>
+								<div class="panel"></div>
+								<div class="panel2"></div>
+							</div>
+							<!-- Tabs Content -->
+							<div class="tab-content" id="nav-tabContent">
+								<div class="tab-pane show active" id="nav-userLogin" role="tabpanel" aria-labelledby="nav-userLogin-tab">
+									<form action="" method="post">
+										<div class="container">
+											<div class="row">
+												<div class="form-group col-lg-4">
+													<input type="text" name="loginUID" class="form-control input-field" id="logUID" autocomplete="off" required />
+													<label class="form-control-placeholder" for="logUID">Username</label>
+												</div>
+												<div class="form-group col-lg-4">
+													<input type="password" name="loginPwd" class="form-control input-field" id="logPass" autocomplete="off" required />
+													<label class="form-control-placeholder" for="logPass">Password</label>
+												</div>
+												<div class="form-group col-lg-4">
+													<button type="submit" name="login-submit" id="form-login-btn" class="btn airline-btn search-btn"><i class="fas fa-sign-in-alt pr-2"></i>Login</button>
+												</div>
+											</div>
+										</div>
+									</form>
+								</div>
+								<div class="tab-pane" id="nav-userSignup" role="tabpanel" aria-labelledby="nav-userSignup-tab">
+									<form action="signup.inc.php" method="post">
+										<div class="container">
+											<div class="row">
+												<div class="form-group col-lg-6">
+													<input type="text" name="uID" class="form-control input-field" id="uID" autocomplete="off" required />
+													<label class="form-control-placeholder" for="uID">Username</label>
+												</div>
+												<div class="form-group col-lg-6">
+													<input type="text" name="email" class="form-control input-field" id="email" autocomplete="off" required />
+													<label class="form-control-placeholder" for="email">Email</label>
+												</div>
+											</div>
+											<div class="row">
+												<div class="form-group col-lg-4">
+													<input type="password" name="pwd" class="form-control input-field" id="pass" autocomplete="off" required />
+													<label class="form-control-placeholder" for="pass">Password</label>
+												</div>
+												<div class="form-group col-lg-4">
+													<input type="password" name="pwd_confirm" class="form-control input-field" id="con_pass" autocomplete="off" required />
+													<label class="form-control-placeholder" for="con_pass">Confirm Password</label>
+												</div>
+												<div class="form-group col-lg-4">
+													<button type="submit" name="signup_submit" class="btn airline-btn add-btn"><i class="fas fa-user-plus pr-2"></i>Signup</button>
+												</div>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- ***** Welcome Area End ***** -->
+
+		<!-- jQuery-2.2.4 js -->
+		<script src="js/jquery/jquery-2.2.4.min.js"></script>
+		<!-- Popper js -->
+		<script src="js/bootstrap/popper.min.js"></script>
+		<!-- Bootstrap-4 js -->
+		<script src="js/bootstrap/bootstrap.min.js"></script>
+		<script src="js/bootstrap/bootstrap-select.min.js"></script>
+		<script src="js/bootstrap/bootstrap-datepicker.min.js"></script>
+		<!-- All Plugins js -->
+		<script src="js/others/plugins.js"></script>
+		<!-- Active JS -->
+		<script src="js/active.js"></script>
+
+		<script>
+			// Navigation-tab animation
+			$("#heroTab a").on("click", function () {
+				var position = $(this).position();
+				var width = $(this).width();
+				$("#heroTab .panel").css({ left: +position.left, width: width });
+			});
+			var actWidth = $("#heroTab").find(".active").width();
+			var actPosition = $("#heroTab .active").position();
+			$("#heroTab .panel").css({ left: +actPosition.left, width: actWidth });
+		</script>
+	</body>
+</html>
